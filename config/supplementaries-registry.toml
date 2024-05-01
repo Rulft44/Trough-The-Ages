@@ -2,7 +2,7 @@
 #Here are configs that need reloading to take effect
 [general]
 	#Enable Creative Tab
-	creative_tab = false
+	creative_tab = true
 	#Set to false to disable custom dispenser behaviors (i.e: filling jars) if for some reason they are causing trouble
 	dispensers = true
 	#Creates a creative tab full of filled jars
@@ -21,7 +21,7 @@
 	notice_board = true
 	crank = true
 	jar = true
-	faucet = true
+	faucet = false
 	turn_table = true
 	spring_launcher = true
 	speaker_block = true
@@ -38,7 +38,7 @@
 	hourglass = true
 	sack = true
 	blackboard = true
-	safe = true
+	safe = false
 	copper_lantern = true
 	gold_trapdoor = true
 	gold_door = true
@@ -53,7 +53,7 @@
 	netherite_trapdoor = true
 	lock_block = true
 	flax = true
-	rope = true
+	rope = false
 	pulley_block = true
 	fodder = true
 	crimson_lantern = true
@@ -90,7 +90,7 @@
 [items]
 	flute = true
 	stasis = true
-	dispenser_minecart = true
+	dispenser_minecart = false
 	soap = true
 	bubble_blower = true
 	antique_ink = true
@@ -101,5 +101,5 @@
 	rope_arrow = true
 	bomb = true
 	pancake = true
-	quiver = true
+	quiver = false
 

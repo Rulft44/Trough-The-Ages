@@ -5,9 +5,9 @@
 
 [hud]
 	#Set to true to disable a new Crosshair for the Crossbow which visually shows inaccuracy, using the default Crosshair instead; false otherwise
-	disable_new_crosshairs_crossbow = false
+	disable_new_crosshairs_crossbow = true
 	#Set to true to disable a new Crosshair for Throwing Weapons which show the charge for them, using the default Crosshair instead; false otherwise
-	disable_new_crosshairs_throwing_weapons = false
+	disable_new_crosshairs_throwing_weapons = true
 	#Set to force compatibility crosshairs for Crosshairs and Throwing Weapons. This won't work if the new crosshairs are disabled
 	force_compatibility_crosshairs = false
 

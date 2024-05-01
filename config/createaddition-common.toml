@@ -76,10 +76,10 @@
 	tesla_coil_hurt_energy_required = 1000
 	#The duration of the Shocked effect for mobs (in ticks).
 	#Range: > 0
-	tesla_coil_effect_time_mob = 20
+	tesla_coil_effect_time_mob = 40
 	#The duration of the Shocked effect for players (in ticks).
 	#Range: > 0
-	tesla_coil_effect_time_player = 20
+	tesla_coil_effect_time_player = 30
 	#Tesla Coil max input in FE/t (Energy transfer).
 	#Range: > 0
 	tesla_coil_max_input = 10000
@@ -88,10 +88,10 @@
 	tesla_coil_recipe_charge_rate = 2000
 	#Damaged dealt to mobs when Tesla Coil is fired (in half hearts).
 	#Range: > 0
-	tesla_coil_hurt_mob = 3
+	tesla_coil_hurt_mob = 5
 	#Damaged dealt to players when Tesla Coil is fired (in half hearts).
 	#Range: > 0
-	tesla_coil_hurt_player = 2
+	tesla_coil_hurt_player = 4
 
 #Alternator
 [alternator]
@@ -109,13 +109,13 @@
 [accumulator]
 	#Accumulator internal capacity per block in FE.
 	#Range: > 0
-	accumulator_capacity = 2000000
+	accumulator_capacity = 10000000
 	#Accumulator max output in FE/t (Energy transfer).
 	#Range: > 0
-	accumulator_max_output = 5000
+	accumulator_max_output = 10000
 	#Accumulator max input in FE/t (Energy transfer).
 	#Range: > 0
-	accumulator_max_input = 5000
+	accumulator_max_input = 10000
 	#Accumulator max multiblock height.
 	#Range: 1 ~ 8
 	accumulator_max_height = 5
@@ -136,8 +136,8 @@
 [misc]
 	#Diamond Grit Sandpaper durability (number of uses).
 	#Range: > 3
-	diamond_grit_sandpaper_uses = 1024
+	diamond_grit_sandpaper_uses = 100
 	#Barbed Wire Damage.
 	#Range: 0.0 ~ 3.4028234663852886E38
-	barbed_wire_damage = 2.0
+	barbed_wire_damage = 3.0
 

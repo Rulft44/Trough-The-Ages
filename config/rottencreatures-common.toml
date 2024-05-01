@@ -11,7 +11,7 @@
 	#determines how often will Undead Miners spawn
 	"Undead Miner Weight" = 20
 	#determines how often will Mummies spawn
-	"Mummy Weight" = 20
+	"Mummy Weight" = 30
 	#determines how often will Dead Beard spawn
 	"Dead Beard Weight" = 10
 	#determines the chance of spawning for Immortals

@@ -2,7 +2,7 @@
 #Settings
 [settings]
 	#If the front of the Tile Entities should face the player or should face outward
-	facePlayer = false
+	facePlayer = true
 	#Arms should render on sides when carrying
 	renderArms = true
 

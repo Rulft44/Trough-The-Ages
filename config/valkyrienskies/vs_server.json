@@ -4,7 +4,7 @@
     "shipsProtectionOutOfBuildHeight" : false
   },
   "ComputerCraft" : {
-    "canTurtlesLeaveScaledShips" : false
+    "canTurtlesLeaveScaledShips" : true
   },
   "enableInteractDistanceChecks" : true,
   "transformTeleports" : true,

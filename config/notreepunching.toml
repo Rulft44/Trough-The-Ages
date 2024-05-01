@@ -8,7 +8,7 @@
 [blockHarvesting]
 
     # If blocks are mineable without the correct tool.
-    doBlocksMineWithoutCorrectTool = true
+    doBlocksMineWithoutCorrectTool = false
 
     # If blocks drop their items without the correct tool.
     doBlocksDropWithoutCorrectTool = false

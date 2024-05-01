@@ -39,7 +39,7 @@
 		narrator_enabled = true
 		#Maximum block range
 		#Range: 0 ~ 100000000
-		range = 64
+		range = 164
 
 	[blocks.bellows]
 		#bellows pushes air following this equation: 
@@ -80,11 +80,11 @@
 		capacity = 12
 		#Allow right click to instantly eat or drink food or potions inside a placed jar.
 		#Disable if you think this ability is op (honey for example). Cookies are excluded
-		drink_from_jar = false
+		drink_from_jar = true
 		#Allows the player to directly drink from jar items
 		drink_from_jar_item = false
 		#Dynamically allows all small mobs inside jars depending on their hitbox size. Tinted jars can accept hostile mbos too
-		jar_auto_detect = false
+		jar_auto_detect = true
 		#Allow Jars to capture small mobs
 		jar_capture = true
 		#Allow Jars to hold cookies
@@ -96,11 +96,11 @@
 		#Allows all entities to be captured by cages and jars. Not meant for survival
 		allow_all_mobs = false
 		#Allows all baby mobs to be captured by cages
-		cage_allow_all_babies = false
+		cage_allow_all_babies = true
 		#Dynamically allows all small mobs inside cages depending on their hitbox size
 		cage_auto_detect = false
 		#Makes it so all (hostile) mobs captured by cages and jars will be set to persistent so they won't despawn when released
-		persistent_mobs = false
+		persistent_mobs = true
 		#Health percentage under which mobs will be allowed to be captured by cages and jars. Leave at 100 to accept any health level
 		#Range: 1 ~ 100
 		health_threshold = 100
@@ -111,7 +111,7 @@
 
 	[blocks.notice_board]
 		#Allows notice boards to accept and display any item, not just maps and books
-		allow_any_item = false
+		allow_any_item = true
 
 	[blocks.sack]
 		#Penalize the player with slowness effect when carrying too many sacks
@@ -121,7 +121,7 @@
 		sack_increment = 2
 		#How many slots should a sack have
 		#Range: 1 ~ 27
-		slots = 9
+		slots = 13
 
 	[blocks.safe]
 		#Makes safes only breakable by their owner or by a player in creative
@@ -132,7 +132,7 @@
 
 	[blocks.blackboard]
 		#Enable to draw directly on a blackboard using any dye. Gui still only works in black and white
-		colored_blackboard = false
+		colored_blackboard = true
 
 	[blocks.timber_frame]
 		#Replace a timber frame with wattle and daub block when daub is placed in it
@@ -171,7 +171,7 @@
 
 	[blocks.item_shelf]
 		#Makes item shelves climbable
-		climbable_shelves = false
+		climbable_shelves = true
 
 	[blocks.iron_gate]
 		#Allows two iron gates to be opened simultaneously when on top of the other
@@ -199,13 +199,13 @@
 			#Spawn weight 
 			#Set to 0 to disable spawning entirely
 			#Range: 0 ~ 100
-			weight = 3
+			weight = 10
 			#Minimum group size
 			#Range: 0 ~ 64
-			min = 5
+			min = 9
 			#Maximum group size
 			#Range: 0 ~ 64
-			max = 9
+			max = 15
 
 	[spawns.structures]
 
@@ -222,7 +222,7 @@
 			show_distance_text = true
 
 		[spawns.structures.wild_flax]
-			enabled = true
+			enabled = false
 			#Spawn wild flax on average every 'x' chunks. Increases spawn frequency
 			#Range: 1 ~ 100
 			rarity = 6
@@ -310,17 +310,17 @@
 		#Allow placeable sticks
 		sticks = true
 		#Allow placeable blaze rods
-		blaze_rods = true
+		blaze_rods = false
 
 	[tweaks.placeable_gunpowder]
 		#Allow placeable gunpowder
 		enabled = true
 		#Number of ticks it takes for gunpowder to burn 1 stage (out of 8). Increase to slow it down
 		#Range: 0 ~ 20
-		speed = 2
+		speed = 1
 		#Age at which it spread to the next gunpowder block. Also affects speed
 		#Range: 0 ~ 8
-		spread_age = 2
+		spread_age = 1
 
 	[tweaks.raked_gravel]
 		#allow gravel to be raked with a hoe
@@ -331,7 +331,7 @@
 		enabled = false
 		#bottling health cost
 		#Range: 0 ~ 20
-		cost = 2
+		cost = 1
 
 	[tweaks.map_tweaks]
 		#In this section you can add custom structure maps to cartographers
@@ -371,7 +371,7 @@
 		#Range: 0.0 ~ 5.0
 		enchanted_book_power = 1.334
 		#Allow all books to be placed both vertically and horizontally
-		mixed_books = false
+		mixed_books = true
 
 	[tweaks.zombie_horse]
 		#Feed a stack of rotten flesh to a skeleton horse to buff him up to a zombie horse
@@ -406,7 +406,7 @@
 
 	[items.rope_arrow]
 		#If you don't like my ropes you can specify here the block id ofa rope from another mod which will get deployed by rope arrows instead of mine
-		rope_arrow_override = "supplementaries:rope"
+		rope_arrow_override = "farmersdelight:rope"
 		#Max number of robe items allowed to be stored inside a rope arrow
 		#Range: 1 ~ 256
 		capacity = 32
@@ -416,18 +416,18 @@
 	[items.flute]
 		#Radius in which an unbound flute will search pets
 		#Range: 0 ~ 500
-		unbound_radius = 64
+		unbound_radius = 164
 		#Max distance at which a bound flute will allow a pet to teleport
 		#Range: 0 ~ 500
-		bound_distance = 64
+		bound_distance = 164
 
 	[items.bomb]
 		#Bomb explosion radius (damage depends on this)
 		#Range: 0.1 ~ 10.0
-		explosion_radius = 2.0
+		explosion_radius = 3.5
 		#Do bombs break blocks like tnt?
 		#Allowed Values: ALL, WEAK, NONE
-		break_blocks = "WEAK"
+		break_blocks = "ALL"
 		#Put here any number other than 0 to have your bombs explode after a certaom amount of ticks instead than on contact
 		#Range: 0 ~ 100000
 		bomb_fuse = 0
@@ -435,23 +435,23 @@
 	[items.blue_bomb]
 		#Bomb explosion radius (damage depends on this)
 		#Range: 0.1 ~ 10.0
-		explosion_radius = 5.15
+		explosion_radius = 6.0
 		#Do bombs break blocks like tnt?
 		#Allowed Values: ALL, WEAK, NONE
-		break_blocks = "WEAK"
+		break_blocks = "ALL"
 
 	[items.slingshot]
 		#Slingshot range multiplier. Affect the initial projectile speed
 		#Range: 0.0 ~ 5.0
-		range_multiplier = 1.0
+		range_multiplier = 5.0
 		#Time in ticks to fully charge a slingshot
 		#Range: 0 ~ 100
-		charge_time = 20
+		charge_time = 5
 		#Deceleration for the stasis projectile
 		#Range: 0.1 ~ 1.0
 		stasis_deceleration = 0.9625
 		#Allow enderman to intercept any slingshot projectile
-		unrestricted_enderman_intercept = true
+		unrestricted_enderman_intercept = false
 
 #General settings
 [general]

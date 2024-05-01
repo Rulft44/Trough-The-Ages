@@ -30,7 +30,7 @@
 
 	[blocks.clock_block]
 		#Display 24h time format. False for 12h format
-		24h_format = true
+		24h_format = false
 
 	[blocks.blackboard]
 		allow_gui = true
@@ -124,15 +124,15 @@
 
 	[blocks.wall_lantern]
 		#Makes wall lantern use a simple block model instead of the animated tile entity renderer. This will make them render much faster but will also remove the animationNote that this option only affect lanterns close by as the one far away render as fast by default
-		fast_lanterns = false
+		fast_lanterns = true
 
 	[blocks.hanging_sign]
 		#Makes hanging signs use a simple block model instead of the animated tile entity renderer. This will make them render much faster but will also remove the animationNote that this option only affect lanterns close by as the one far away render as fast by default
-		fast_signs = false
+		fast_signs = true
 
 	[blocks.bamboo_spikes]
 		#Populate the creative inventory with all tipped spikes variations
-		populate_creative_tab = true
+		populate_creative_tab = false
 
 	[blocks.turn_table]
 		#Display visual particles when a block is rotated
@@ -140,7 +140,7 @@
 
 	[blocks.speaker_block]
 		#Mute speaker block incoming narrator messages and displays them in chat instead
-		mute_narrator = false
+		mute_narrator = true
 
 	[blocks.rope]
 		#Amplitude of rope wobbling effect

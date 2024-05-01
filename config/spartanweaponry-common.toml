@@ -458,7 +458,7 @@
 	disable_terrain_damage = false
 	#Time (in ticks) it takes for Dynamite to explode
 	#Range: 20 ~ 600
-	fuse_ticks_dynamite = 60
+	fuse_ticks_dynamite = 30
 	#Explosion strength for Dynamite
 	#Range: 0.10000000149011612 ~ 10.0
 	explosion_strength_dynamite = 2.0

@@ -55,7 +55,7 @@
 	#Whether later levels of infected should deplete hunger quicker? 
 	infectHunger = true
 	#Chance for a player to get infected, a value of 1 or higher makes it guaranteed
-	playerInfectChance = 0.75
+	playerInfectChance = 0.5
 	#How long do each of the 4 effect phases last for before the next phase is activated?
 	ticksForEffectStage = 6000
 	#Do players who die to infection spawn a zombie?
@@ -69,9 +69,9 @@
 	#Whether zombies and drowned burn in sunlight.
 	zombiesBurn = false
 	#Whether skeletons and strays burn in sunlight.
-	skeletonsBurn = false
+	skeletonsBurn = true
 	#Whether zombie villagers have vanilla curing mechanics or not
-	zombieVillagersCanBeCured = false
+	zombieVillagersCanBeCured = true
 	#Whether piglins and hoglins automatically convert to zombies in the overworld
 	piglinsHoglinsConvert = false
 	#Whether zombie horses are aggressive or not.
@@ -85,15 +85,15 @@
 	#Whether zombie piglins are hostile by default
 	zombiePiglinsHostile = true
 	#Whether piglins kill zombie mobs
-	piglinsHuntZombies = true
+	piglinsHuntZombies = false
 	#Whether piglins use cures they find and keep in their inventory to heal infection.
 	piglinsCureThemself = true
 	#Whether illagers kill zombie mobs
 	illagersHuntZombies = true
 	#Whether zoglins are agressive towards other undead mobs
-	zoglinsAttackUndead = false
+	zoglinsAttackUndead = true
 	#Whether zoglins are agressive towards non-undead monsters
-	zoglinsAttackMobs = true
+	zoglinsAttackMobs = false
 
 	[Misc."Zombie Players"]
 		#Whether to use zombie players as graves all the time. (Even if infection is disabled)

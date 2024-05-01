@@ -1,10 +1,10 @@
 {
   "Zombie spawn rate can be 0-100": " ",
-  "Day zombie spawn rate": 10,
+  "Day zombie spawn rate": 5,
   "Spawn day zombies in lit areas": false,
   "Spawn day zombies on water": false,
   "decides whether only day zombies or all zombies will be immune to sunlight. Writing none burns them all, day makes only day zombies immune, all makes all zombies immune. day set as default.": " ",
-  "Zombie Sunscreen": "day",
+  "Zombie Sunscreen": "all",
   "decides whether day zombies will have potion effects, as listed below. Set potion value to the level you want the potion minus 1. false set as default.": " ",
   "Potions": false,
   "Speed": "0",
