@@ -5,7 +5,7 @@
 	"Enable difficulty scaling" = true
 	#Time in ticks for which the difficulty shouldnt increase at the beginning. One full minecraft day is 24000 ticks
 	#Range: > 0
-	"Difficulty Delay" = 0
+	"Difficulty Delay" = 24000
 	#If true ignores mobs from spawners
 	"Ignore Spawner" = false
 	#Handles increase in difficulty regarding current difficulty.
@@ -17,9 +17,9 @@
 	#Wether difficulty should only increase with at least one online players or not
 	"Ignore Players" = false
 	#If true will increase difficulty by the amount of time skipped. Else will only increase difficulty once.
-	"Punish Time Skip" = true
+	"Punish Time Skip" = false
 	#Disable/Enable friendly fire for owned pets.
-	FriendlyFire = false
+	FriendlyFire = true
 	#Blacklist for pet you should't be able to give armor to. Pets from mods, which have custom armor already should be included here (for balancing reasons).
 	"Pet Blacklist" = []
 	#Treat pet blacklist as whitelist
@@ -112,7 +112,7 @@
 	Sound = false
 	#Chance for a mob to be able to break blocks
 	#Range: 0.0 ~ 1.0
-	"Breaker Chance" = 0.3
+	"Breaker Chance" = 0.0
 	#Initial cooldown for block breaking mobs
 	#Range: > 0
 	"Breaker Initial Cooldown" = 120
@@ -127,7 +127,7 @@
 	"Idle Break" = false
 	#Chance for a mob to be able to steal items from inventory blocks
 	#Range: 0.0 ~ 1.0
-	"Stealer Chance" = 0.3
+	"Stealer Chance" = 0.01
 	#List of blocks mobs shouldn't steal from. You can also add a modid to blacklist whole mods
 	"Steal Block Blacklist" = []
 	#Items which will be given to mobs who can break blocks. Empty list = no items. Syntax: id;weight
@@ -149,10 +149,10 @@
 	"Difficulty Steal AI" = 0.0
 	#Chance for mobs to be able to summon an aquatic mount
 	#Range: 0.0 ~ 1.0
-	"Guardian Chance" = 1.0
+	"Guardian Chance" = 0.0
 	#Chance for mobs to be able to summon a flying mount
 	#Range: 0.0 ~ 1.0
-	"Phantom Chance" = 0.5
+	"Phantom Chance" = 0.0
 
 #Configs regarding mobs spawning with equipment
 [equipment]
@@ -187,10 +187,10 @@
 	"Weapon Chance Add" = 0.3
 	#Base chance for each armor pieces to get enchanted
 	#Range: 0.0 ~ 1.0
-	"Enchanting Chance" = 0.2
+	"Enchanting Chance" = 0.0
 	#Adds additional x*difficulty% to base enchanting chance
 	#Range: 0.0 ~ 1.7976931348623157E308
-	"Enchanting Addition" = 0.2
+	"Enchanting Addition" = 0.0
 	#Specify min and max enchanting levels according to difficulty. difficulty-minLevel-maxLevel
 	"Enchanting Calc" = ["0-5-10", "25-5-15", "50-10-17", "100-15-25", "200-20-30", "250-30-35"]
 	#Blacklist enchantments from being applied to equipments
@@ -213,7 +213,7 @@
 	"Health Increase Multiplier" = 1.0
 	#Health will be multiplied by at maximum this. Set to 0 means no limit
 	#Range: 0.0 ~ 1.7976931348623157E308
-	"Max Health Increase" = 5.0
+	"Max Health Increase" = 3.0
 	#Round health to the nearest x. Set to 0 to disable
 	#Range: 0.0 ~ 1.7976931348623157E308
 	"Round HP" = 0.5
@@ -228,7 +228,7 @@
 	"Speed Increase" = 1.0
 	#Maximum increase in speed
 	#Range: 0.0 ~ 1.0
-	"Max Speed" = 0.1
+	"Max Speed" = 0.075
 	#Knockback will be increased by difficulty*0.002*x. Set to 0 to disable
 	#Range: 0.0 ~ 1.7976931348623157E308
 	"Knockback Increase" = 1.0
@@ -246,7 +246,7 @@
 	"Projectile Damage Increase" = 1.0
 	#Projectile damage will be multiplied by maximum of this
 	#Range: 0.0 ~ 1.7976931348623157E308
-	"Max Projectile Damage" = 2.0
+	"Max Projectile Damage" = 1.5
 	#Explosion Damage will be multiplied by 1 + difficulty*0.003*x. Set to 0 to disable
 	#Range: 0.0 ~ 1.7976931348623157E308
 	"Explosion Damage Increase" = 1.0
