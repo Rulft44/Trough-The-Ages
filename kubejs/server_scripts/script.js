@@ -97,8 +97,33 @@ onEvent('recipes', event => {
 		  S:'minecraft:stick'
 		}
 	)
-	
 
+	//netherite-handling
+	//remove diamond armor and netherite recipes
+	event.remove({output:'minecraft:diamond_helmet'})
+	event.remove({output:'minecraft:diamond_chestplate'})
+	event.remove({output:'minecraft:diamond_leggings'})
+	event.remove({output:'minecraft:diamond_boots'})
+	event.remove({output:'minecraft:netherite_helmet'})
+	event.remove({output:'minecraft:netherite_chestplate'})
+	event.remove({output:'minecraft:netherite_leggings'})
+	event.remove({output:'minecraft:netherite_boots'})
+	event.remove({output:'minecraft:netherite_ingot'})
+	event.remove({output:'minecraft:netherite_pickaxe'})
+	event.remove({output:'minecraft:netherite_axe'})
+	event.remove({output:'minecraft:netherite_shovel'})
+	event.remove({output:'minecraft:netheite_hoe'})
+	//add netherite alloy mixing
+	event.recipes.create.mixing('2x minecraft:netherite_ingot',[Fluid.lava(1000),'8x vintageimprovements:nethersteel_sheet','4x minecraft:netherite_scrap','2x create_dd:blaze_gold']).superheated()
+	//set new netherite stuff recipes
+	event.recipes.create.compacting('minecraft:netherite_helmet',[Fluid.lava(1000),'minecraft:netherite_ingot','alloyed:steel_helmet','4x create:golden_sheet']).superheated()
+	event.recipes.create.compacting('minecraft:netherite_chestplate',[Fluid.lava(1000),'minecraft:netherite_ingot','alloyed:steel_chestplate','4x create:golden_sheet']).superheated()
+	event.recipes.create.compacting('minecraft:netherite_leggings',[Fluid.lava(1000),'minecraft:netherite_ingot','alloyed:steel_leggings','4x create:golden_sheet']).superheated()
+	event.recipes.create.compacting('minecraft:netherite_boots',[Fluid.lava(1000),'minecraft:netherite_ingot','alloyed:steel_boots','4x create:golden_sheet']).superheated()
+	event.recipes.create.compacting('minecraft:netherite_pickaxe',[Fluid.lava(1000),'minecraft:netherite_ingot','minecraft:diamond_pickaxe','2x minecraft:netherite_scrap']).superheated()
+	event.recipes.create.compacting('minecraft:netherite_axe',[Fluid.lava(1000),'minecraft:netherite_ingot','minecraft:diamond_axe','2x minecraft:netherite_scrap']).superheated()
+	event.recipes.create.compacting('minecraft:netherite_shovel',[Fluid.lava(1000),'minecraft:netherite_ingot','minecraft:diamond_shovel','2x minecraft:netherite_scrap']).superheated()
+	event.recipes.create.compacting('minecraft:netherite_hoe',[Fluid.lava(1000),'minecraft:netherite_ingot','minecraft:diamond_hoe','2x minecraft:netherite_scrap']).superheated()
 	// AGE 1 ADDS------------------------------------------
 	//add copper nuggies from gravel
 	event.custom({
@@ -141,6 +166,22 @@ onEvent('recipes', event => {
   		'minecraft:grass',
   		'minecraft:grass'
 	])
+	//remove farmersdelight flint knife
+	event.remove({output:'farmersdelight:flint_knife'})
+	//remove all useless shit from notreepunching
+	event.remove({output:'notreepunching:ceramic_bucket'})
+	event.remove({output:'notreepunching:clay_tool'})
+	event.remove({output:'notreepunching:macuahuitl'})
+	event.remove({output:'notreepunching:iron_knife'})
+	event.remove({output:'notreepunching:gold_knife'})
+	event.remove({output:'notreepunching:diamond_knife'})
+	event.remove({output:'notreepunching:netherite_knife'})
+	event.remove({output:'notreepunching:iron_mattock'})
+	event.remove({output:'notreepunching:gold_mattock'})
+	event.remove({output:'notreepunching:diamond_mattock'})
+	event.remove({output:'notreepunching:netherite_mattock'})
+	//add normal clay back
+	event.smelting('minecraft:brick','minecraft:clay_ball')
 
 	//AGE 2 ADDS----------------------------------------
 	//add cinder flour recipe
@@ -210,5 +251,38 @@ onEvent('recipes', event => {
 	event.recipes.create.mixing(Fluid.lava(25),['#bookshelf:stones','minecraft:gunpowder'])
 
 	//AGE 3 ADDS-----------------------------------------
+	//remove alloyed & create_dd steel recipe
+	event.remove({mod:'alloyed',output:'alloyed:steel_ingot'})
+	event.remove({mod:'create_dd',output:'create_dd:steel_ingot'})
+	//add blaze powder recipe
+	event.recipes.create.mixing('2x minecraft:blaze_powder',[Fluid.lava(500),'immersiveengineering:coke']).heated()
+	//change blast brick recipe
+	event.remove({output:'immersiveengineering:blastbrick'})
+	event.recipes.create.deploying('3x immersiveengineering:blastbrick',['minecraft:magma_block','minecraft:blaze_powder'])
+	//change rose quartz recipe
+	event.shapeless('create:rose_quartz',
+	[
+		'vintageimprovements:vanadium_nugget',
+		'minecraft:quartz',
+		'7x minecraft:redstone'
+
+	])
+	//add basalt recipe
+	event.recipes.create.filling('minecraft:basalt',[Fluid.water(1000),'minecraft:magma_block'])
+	//remove reinforcement plating
+	event.remove({output:'create_dd:reinforcement_plating'})
+	//add nametag recipe
+	event.shaped(
+		Item.of('minecraft:name_tag'),
+		[
+			'II',
+			'BB',
+			'BB'
+		],
+		{
+			I:'minecraft:iron_ingot',
+			B:'create:brass_sheet'
+		}
+	)
 
 })
