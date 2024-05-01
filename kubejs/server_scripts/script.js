@@ -12,24 +12,94 @@ onEvent('recipes', event => {
 	//Startup stuff
 	console.log('sigma script has been loaded')
 
-	// REMOVAL
+	// ORE ADDS--------------------------------------------
+	//add 7 nuggies from blasting to ALL ores
+	event.blasting('7x minecraft:iron_nugget', 'minecraft:raw_iron')
+	event.blasting('7x create:copper_nugget', 'minecraft:raw_copper')
+	event.blasting('7x minecraft:gold_nugget', 'minecraft:raw_gold')
+	event.blasting('7x create_dd:tin_nugget', 'create_dd:raw_tin')
+	event.blasting
+
+	// REMOVAL---------------------------------------------
+	//remove tree fertilizer due to crash :(
+	event.remove({output:'create:tree_fertilizer'})
 
 	//remove age 1 stuff
 	event.remove({output:'minecraft:blast_furnace' })
 	event.remove({id:'farmersdelight:cutting/gravel'})
+
 	//remove all ores from basic smelting
-	//iron
 	event.remove([{ type: 'minecraft:smelting', output: 'minecraft:iron_ingot' }, { type: 'minecraft:blasting', output: 'minecraft:iron_ingot' }])
-	//copper
 	event.remove([{ type: 'minecraft:smelting', output: 'minecraft:copper_ingot' }, { type: 'minecraft:blasting', output: 'minecraft:copper_ingot' }])
-	//gold
 	event.remove([{ type: 'minecraft:smelting', output: 'minecraft:gold_ingot' }, { type: 'minecraft:blasting', output: 'minecraft:gold_ingot' }])
-	//zinc
 	event.remove([{ type: 'minecraft:smelting', output: 'create:zinc_ingot' }, { type: 'minecraft:blasting', output: 'create:zinc_ingot' }])
+	event.remove([{ type: 'minecraft:smelting', output: 'immersiveengineering:ingot_aluminum'}, { type: 'minecraft:blasting', output: 'immersiveengineering:ingot_aluminum'}])
+	event.remove([{ type: 'minecraft:smelting', output: 'immersiveengineering:ingot_lead'}, { type: 'minecraft:blasting', output: 'immersiveengineering:ingot_lead'}])
+	event.remove([{ type: 'minecraft:smelting', output: 'immersiveengineering:ingot_silver'}, { type: 'minecraft:blasting', output: 'immersiveengineering:ingot_silver'}])
+	event.remove([{ type: 'minecraft:smelting', output: 'immersiveengineering:ingot_nickel'}, { type: 'minecraft:blasting', output: 'immersiveengineering:ingot_nickel'}])
+	event.remove([{ type: 'minecraft:smelting', output: 'immersiveengineering:ingot_uranium'}, { type: 'minecraft:blasting', output: 'immersiveengineering:ingot_uranium'}])
 
+	//remove all diamond tools from normal crafting and add more complicated crafting ones
+	event.remove({id:'minecraft:diamond_pickaxe'})
+	event.remove({id:'minecraft:diamond_axe'})
+	event.remove({id:'minecraft:diamond_shovel'})
+	event.remove({id:'minecraft:diamond_hoe'})
+	//-.-
+	event.shaped(
+		Item.of('minecraft:diamond_pickaxe', 1),
+		[
+			'DDD',
+			'FSF',
+			' S '
+		],
+		{
+		  D:'minecraft:diamond',
+		  F:'cold_sweat:fur',
+		  S:'minecraft:stick'
+		}
+	)
+	event.shaped(
+		Item.of('minecraft:diamond_axe', 1),
+		[
+			'DDF',
+			'DSF',
+			' S '
+		],
+		{
+		  D:'minecraft:diamond',
+		  F:'cold_sweat:fur',
+		  S:'minecraft:stick'
+		}
+	)
+	event.shaped(
+		Item.of('minecraft:diamond_shovel', 1),
+		[
+			'FDF',
+			' S ',
+			' S '
+		],
+		{
+		  D:'minecraft:diamond',
+		  F:'cold_sweat:fur',
+		  S:'minecraft:stick'
+		}
+	)
+	event.shaped(
+		Item.of('minecraft:diamond_hoe', 1),
+		[
+			'DDF',
+			'FS ',
+			' S '
+		],
+		{
+		  D:'minecraft:diamond',
+		  F:'cold_sweat:fur',
+		  S:'minecraft:stick'
+		}
+	)
+	
 
-	// AGE 1 ADDS
-
+	// AGE 1 ADDS------------------------------------------
 	//add copper nuggies from gravel
 	event.custom({
 		type: 'farmersdelight:cutting',
@@ -51,6 +121,7 @@ onEvent('recipes', event => {
 		  { item: 'create:copper_nugget', count: 1 }
 		]
 	})
+
 	//add blast furnace from copper
 	event.shaped(
 		Item.of('minecraft:blast_furnace', 1),
@@ -65,19 +136,79 @@ onEvent('recipes', event => {
 		  S: 'minecraft:smooth_stone'
 		}
 	)
-	//add 7 iron nuggies from blasting to ALL ores
-	event.blasting('7x minecraft:iron_nugget', 'minecraft:raw_iron')
-	event.blasting('7x create:copper_nugget', 'minecraft:raw_copper')
-	event.blasting('7x minecraft:gold_nugget', 'minecraft:raw_gold')
-	event.blasting('7x create_dd:tin_nugget', 'create_dd:raw_tin')
 	//add plant fiber from grass
-	event.shapeless(
-		Item.of('notreepunching:plant_fibre', 3), 
+	event.shapeless('2x notreepunching:plant_fiber', [ 
+  		'minecraft:grass',
+  		'minecraft:grass'
+	])
+
+	//AGE 2 ADDS----------------------------------------
+	//add cinder flour recipe
+	event.shapeless('1x create:cinder_flour', [
+		'create:wheat_flour',
+		'create:scorchia'
+	])
+	//change empty blaze burner recipe
+	event.remove({output:'create:empty_blaze_burner'})
+	event.shaped(
+		Item.of('create:empty_blaze_burner'),
 		[
-		  'minecraft:grass',
-		  'minecraft:grass', 	     
-		  'minecraft:grass'
-		]
-	  )
+			'ZBZ',
+			'BRB',
+			'ZBZ'
+		],
+		{
+			Z:'#forge:plates/zinc',
+			B:'minecraft:iron_bars',
+			R:'minecraft:netherrack'
+		}
+	)
+	//add blaze burner recipe
+	event.shaped(
+		Item.of('create:blaze_burner'),
+		[
+			'GDG',
+			'LBL',
+			'OEO'
+		],
+		{
+			G:'createaddition:gold_rod',
+			D:'minecraft:diamond',
+			L:'minecraft:lava_bucket',
+			O:'minecraft:obsidian',
+			B:'minecraft:blast_furnace',
+			E:'create:empty_blaze_burner'
+		}
+	)
+	//add Saddle recipe
+	event.shaped(
+		Item.of('minecraft:saddle'),
+		[
+			'LLL',
+			'A A'
+		],
+		{
+			L:'minecraft:leather',
+			A:'create:andesite_alloy'
+		}
+	)
+	//add soul soil recipe
+	event.recipes.create.sandpaper_polishing(Item.of('minecraft:soul_soil').withChance(0.35), 'minecraft:coal_block')
+	//make buckets out of steel
+	event.remove({output:'minecraft:bucket'})
+	event.shaped(
+		Item.of('minecraft:bucket'),
+		[
+			'S S',
+			' S '
+		],
+		{
+			S:'#forge:ingots/steel'
+		}
+	)
+	//make unheated lava recipe
+	event.recipes.create.mixing(Fluid.lava(25),['#bookshelf:stones','minecraft:gunpowder'])
+
+	//AGE 3 ADDS-----------------------------------------
 
 })
