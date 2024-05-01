@@ -1,0 +1,134 @@
+To refresh this file, delete it and run /reload command again! Last updated: May 1, 2024, 2:02:19 PM
+
+#spartanweaponry:materials/copper
+
+#spartanweaponry:battle_hammer
+- spartanweaponry:extra_knockback
+- spartanweaponry:nauseous_blow
+- spartanweaponry:hammer_slam
+
+#spartanweaponry:javelin
+- spartanweaponry:thrown_damage_bonus_2
+
+#spartanweaponry:parrying_dagger
+- spartanweaponry:block_melee
+
+#spartanweaponry:materials/silver
+- spartanweaponry:undead_damage_bonus
+
+#spartanweaponry:materials/nickel
+
+#spartanweaponry:lance
+- spartanweaponry:reach_1
+- spartanweaponry:riding_damage_bonus
+- spartanweaponry:sweep_1
+
+#spartanweaponry:cestus
+- spartanweaponry:quick_strike
+
+#spartanweaponry:halberd
+- spartanweaponry:two_handed_2
+- spartanweaponry:reach_1
+- spartanweaponry:shield_breach
+
+#spartanweaponry:dagger
+- spartanweaponry:throwable
+- spartanweaponry:backstab_damage_bonus
+
+#spartanweaponry:materials/electrum
+
+#spartanweaponry:materials/invar
+
+#spartanweaponry:katana
+- spartanweaponry:two_handed_1
+- spartanweaponry:chest_damage_bonus
+- spartanweaponry:sweep_1
+
+#spartanweaponry:materials/platinum
+
+#spartanweaponry:materials/lead
+- spartanweaponry:heavy_2
+
+#spartanweaponry:spear
+- spartanweaponry:reach_1
+
+#spartanweaponry:throwing_knife
+- spartanweaponry:thrown_damage_bonus_1
+
+#spartanweaponry:materials/gold
+
+#spartanweaponry:glaive
+- spartanweaponry:two_handed_1
+- spartanweaponry:reach_1
+- spartanweaponry:sweep_2
+
+#spartanweaponry:boomerang
+
+#spartanweaponry:materials/steel
+
+#spartanweaponry:club
+- spartanweaponry:nauseous_blow
+
+#spartanweaponry:rapier
+- spartanweaponry:damage_absorb
+- spartanweaponry:unarmoured_damage_bonus
+
+#spartanweaponry:greatsword
+- spartanweaponry:two_handed_2
+- spartanweaponry:reach_1
+- spartanweaponry:sweep_3
+
+#spartanweaponry:warhammer
+- spartanweaponry:two_handed_1
+- spartanweaponry:armour_piercing
+
+#spartanweaponry:flanged_mace
+- spartanweaponry:undead_damage_bonus
+
+#spartanweaponry:quarterstaff
+- spartanweaponry:two_handed_1
+- spartanweaponry:sweep_2
+
+#spartanweaponry:materials/stone
+
+#spartanweaponry:scythe
+- spartanweaponry:head_damage_bonus
+- spartanweaponry:decapitate
+- spartanweaponry:harvester
+
+#spartanweaponry:materials/netherite
+- spartanweaponry:fireproof
+
+#spartanweaponry:longsword
+- spartanweaponry:two_handed_1
+
+#spartanweaponry:materials/tin
+
+#spartanweaponry:materials/iron
+
+#spartanweaponry:tomahawk
+- spartanweaponry:thrown_damage_bonus_1
+
+#spartanweaponry:materials/aluminum
+- spartanweaponry:lightweight_2
+
+#spartanweaponry:battleaxe
+- spartanweaponry:two_handed_1
+- spartanweaponry:versatile_axe
+
+#spartanweaponry:materials/leather
+
+#spartanweaponry:materials/wood
+
+#spartanweaponry:saber
+- spartanweaponry:damage_absorb
+- spartanweaponry:chest_damage_bonus
+- spartanweaponry:sweep_1
+
+#spartanweaponry:materials/diamond
+
+#spartanweaponry:materials/bronze
+
+#spartanweaponry:pike
+- spartanweaponry:two_handed_1
+- spartanweaponry:reach_2

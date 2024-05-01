@@ -1,0 +1,532 @@
+{
+  "__comment": [
+    "Mobs will be able to equip items declared here",
+    "The first number is the weight while the second number is the quality",
+    "Weight is the weight of an item. Higher weight means that the item is more likely to get choosen",
+    "Quality is a modifier applied to the weight. The final weight used is weight + quality * current difficulty"
+  ],
+  "MAINHAND": {
+    "alloyed:steel_axe": [
+      862,
+      3.384207
+    ],
+    "alloyed:steel_sword": [
+      958,
+      3.3884482
+    ],
+    "create_dd:deforester_saw": [
+      800,
+      3.3607779
+    ],
+    "create_dd:forest_ravager": [
+      1,
+      0.58640003
+    ],
+    "create_things_and_misc:brass_knife": [
+      1308,
+      3.125868
+    ],
+    "create_things_and_misc:copper_knife": [
+      1342,
+      3.0802538
+    ],
+    "create_things_and_misc:zinc_knife": [
+      1342,
+      3.0802538
+    ],
+    "immersive_weathering:ice_sickle": [
+      1257,
+      3.1881573
+    ],
+    "immersiveengineering:axe_steel": [
+      943,
+      3.3902173
+    ],
+    "immersiveengineering:sword_steel": [
+      1065,
+      3.3514936
+    ],
+    "italian_delight:iron_pizza_peel": [
+      1260,
+      3.1847003
+    ],
+    "italian_delight:rolling_pin": [
+      1274,
+      3.1682255
+    ],
+    "minecraft:bow": [
+      1108,
+      3.3252485
+    ],
+    "minecraft:crossbow": [
+      1000,
+      3.3789356
+    ],
+    "minecraft:diamond_axe": [
+      693,
+      3.277826
+    ],
+    "minecraft:diamond_sword": [
+      789,
+      3.35481
+    ],
+    "minecraft:enchanted_book": [
+      1100,
+      3.330605
+    ],
+    "minecraft:golden_axe": [
+      1248,
+      3.1983666
+    ],
+    "minecraft:golden_sword": [
+      1362,
+      3.0519345
+    ],
+    "minecraft:iron_axe": [
+      1087,
+      3.3388495
+    ],
+    "minecraft:iron_sword": [
+      1225,
+      3.2233663
+    ],
+    "minecraft:lingering_potion{Potion:\"minecraft:harming\"}": [
+      1050,
+      3.3591573
+    ],
+    "minecraft:netherite_axe": [
+      498,
+      3.5040615
+    ],
+    "minecraft:netherite_sword": [
+      602,
+      3.1595929
+    ],
+    "minecraft:snowball": [
+      1400,
+      2.99516
+    ],
+    "minecraft:splash_potion{Potion:\"minecraft:harming\"}": [
+      1050,
+      3.3591573
+    ],
+    "minecraft:stone_axe": [
+      1122,
+      3.3153648
+    ],
+    "minecraft:stone_sword": [
+      1298,
+      3.138668
+    ],
+    "minecraft:tnt": [
+      800,
+      3.3607779
+    ],
+    "minecraft:trident": [
+      900,
+      3.3903658
+    ],
+    "minecraft:wooden_axe": [
+      1240,
+      3.2072408
+    ],
+    "minecraft:wooden_sword": [
+      1354,
+      3.0633936
+    ],
+    "notreepunching:diamond_knife": [
+      869,
+      3.3857973
+    ],
+    "notreepunching:diamond_saw": [
+      831,
+      3.3746235
+    ],
+    "notreepunching:flint_axe": [
+      1337,
+      3.0871642
+    ],
+    "notreepunching:flint_knife": [
+      1397,
+      2.9997823
+    ],
+    "notreepunching:gold_knife": [
+      1418,
+      2.9669335
+    ],
+    "notreepunching:gold_saw": [
+      1392,
+      3.0074317
+    ],
+    "notreepunching:iron_knife": [
+      1297,
+      3.1399326
+    ],
+    "notreepunching:iron_saw": [
+      1263,
+      3.1812177
+    ],
+    "notreepunching:macuahuitl": [
+      1337,
+      3.0871642
+    ],
+    "notreepunching:netherite_knife": [
+      690,
+      3.2746646
+    ],
+    "notreepunching:netherite_saw": [
+      648,
+      3.2252514
+    ]
+  },
+  "OFFHAND": {
+    "minecraft:ender_pearl": [
+      1100,
+      3.330605
+    ],
+    "minecraft:flint_and_steel": [
+      1200,
+      3.248736
+    ],
+    "minecraft:lava_bucket": [
+      900,
+      3.3903658
+    ],
+    "minecraft:shield": [
+      1350,
+      3.0690577
+    ]
+  },
+  "FEET": {
+    "alloyed:steel_boots": [
+      308,
+      3.4920812
+    ],
+    "cold_sweat:fur_boots": [
+      1006,
+      3.3770394
+    ],
+    "cold_sweat:hoglin_hooves": [
+      643,
+      3.2187133
+    ],
+    "create:copper_diving_boots": [
+      1141,
+      3.3009238
+    ],
+    "create:netherite_diving_boots": [
+      361,
+      3.5755088
+    ],
+    "create_things_and_misc:sticky_boots_boots": [
+      340,
+      3.5509384
+    ],
+    "immersiveengineering:armor_faraday_feet": [
+      1366,
+      3.0461407
+    ],
+    "immersiveengineering:armor_steel_feet": [
+      505,
+      2.9773476
+    ],
+    "minecraft:chainmail_boots": [
+      1098,
+      3.3319101
+    ],
+    "minecraft:diamond_boots": [
+      444,
+      3.5762582
+    ],
+    "minecraft:golden_boots": [
+      1201,
+      3.2477574
+    ],
+    "minecraft:iron_boots": [
+      954,
+      3.3890054
+    ],
+    "minecraft:leather_boots": [
+      1356,
+      3.060545
+    ],
+    "minecraft:netherite_boots": [
+      361,
+      3.5755088
+    ],
+    "pneumaticcraft:compressed_iron_boots": [
+      628,
+      3.1982348
+    ],
+    "pneumaticcraft:pneumatic_boots": [
+      628,
+      3.1982348
+    ]
+  },
+  "LEGS": {
+    "alloyed:steel_leggings": [
+      308,
+      3.4920812
+    ],
+    "cold_sweat:fur_pants": [
+      1006,
+      3.3770394
+    ],
+    "cold_sweat:hoglin_trousers": [
+      643,
+      3.2187133
+    ],
+    "immersiveengineering:armor_faraday_legs": [
+      1366,
+      3.0461407
+    ],
+    "immersiveengineering:armor_steel_legs": [
+      505,
+      2.9773476
+    ],
+    "minecraft:chainmail_leggings": [
+      1098,
+      3.3319101
+    ],
+    "minecraft:diamond_leggings": [
+      444,
+      3.5762582
+    ],
+    "minecraft:golden_leggings": [
+      1201,
+      3.2477574
+    ],
+    "minecraft:iron_leggings": [
+      954,
+      3.3890054
+    ],
+    "minecraft:leather_leggings": [
+      1356,
+      3.060545
+    ],
+    "minecraft:netherite_leggings": [
+      361,
+      3.5755088
+    ],
+    "pneumaticcraft:compressed_iron_leggings": [
+      628,
+      3.1982348
+    ],
+    "pneumaticcraft:pneumatic_leggings": [
+      628,
+      3.1982348
+    ]
+  },
+  "CHEST": {
+    "alloyed:steel_chestplate": [
+      308,
+      3.4920812
+    ],
+    "cold_sweat:fur_parka": [
+      1006,
+      3.3770394
+    ],
+    "cold_sweat:hoglin_tunic": [
+      643,
+      3.2187133
+    ],
+    "create:copper_backtank": [
+      1141,
+      3.3009238
+    ],
+    "create:netherite_backtank": [
+      361,
+      3.5755088
+    ],
+    "immersiveengineering:armor_faraday_chest": [
+      1366,
+      3.0461407
+    ],
+    "immersiveengineering:armor_steel_chest": [
+      505,
+      2.9773476
+    ],
+    "minecraft:chainmail_chestplate": [
+      1098,
+      3.3319101
+    ],
+    "minecraft:diamond_chestplate": [
+      444,
+      3.5762582
+    ],
+    "minecraft:golden_chestplate": [
+      1201,
+      3.2477574
+    ],
+    "minecraft:iron_chestplate": [
+      954,
+      3.3890054
+    ],
+    "minecraft:leather_chestplate": [
+      1356,
+      3.060545
+    ],
+    "minecraft:netherite_chestplate": [
+      361,
+      3.5755088
+    ],
+    "pneumaticcraft:compressed_iron_chestplate": [
+      628,
+      3.1982348
+    ],
+    "pneumaticcraft:pneumatic_chestplate": [
+      628,
+      3.1982348
+    ],
+    "quark:backpack": [
+      1356,
+      3.060545
+    ]
+  },
+  "HEAD": {
+    "alloyed:steel_helmet": [
+      308,
+      3.4920812
+    ],
+    "cold_sweat:fur_cap": [
+      1006,
+      3.3770394
+    ],
+    "cold_sweat:hoglin_headpiece": [
+      643,
+      3.2187133
+    ],
+    "create:copper_diving_helmet": [
+      1141,
+      3.3009238
+    ],
+    "create:netherite_diving_helmet": [
+      361,
+      3.5755088
+    ],
+    "dayzombierebooted:protection_helmet": [
+      954,
+      3.3890054
+    ],
+    "immersive_weathering:flower_crown": [
+      1379,
+      3.0270116
+    ],
+    "immersiveengineering:armor_faraday_head": [
+      1366,
+      3.0461407
+    ],
+    "immersiveengineering:armor_steel_head": [
+      505,
+      2.9773476
+    ],
+    "minecraft:chainmail_helmet": [
+      1098,
+      3.3319101
+    ],
+    "minecraft:diamond_helmet": [
+      444,
+      3.5762582
+    ],
+    "minecraft:golden_helmet": [
+      1201,
+      3.2477574
+    ],
+    "minecraft:iron_helmet": [
+      954,
+      3.3890054
+    ],
+    "minecraft:leather_helmet": [
+      1356,
+      3.060545
+    ],
+    "minecraft:netherite_helmet": [
+      361,
+      3.5755088
+    ],
+    "minecraft:shulker_shell": [
+      1328,
+      3.0994248
+    ],
+    "minecraft:turtle_helmet": [
+      865,
+      3.3849142
+    ],
+    "pneumaticcraft:compressed_iron_helmet": [
+      628,
+      3.1982348
+    ],
+    "pneumaticcraft:pneumatic_helmet": [
+      628,
+      3.1982348
+    ],
+    "quark:forgotten_hat": [
+      1356,
+      3.060545
+    ],
+    "railways:black_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:blue_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:brown_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:cyan_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:gray_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:green_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:light_blue_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:light_gray_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:lime_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:magenta_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:orange_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:pink_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:purple_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:red_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:white_conductor_cap": [
+      1500,
+      2.8278525
+    ],
+    "railways:yellow_conductor_cap": [
+      1500,
+      2.8278525
+    ]
+  }
+}

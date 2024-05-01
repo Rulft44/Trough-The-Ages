@@ -1,0 +1,13 @@
+
+["Configs for Proximity Text Chat"]
+	#How close you have to be to see other's messages
+	Range = 50
+	#Toggles distortion mode
+	"Distortion Mode Toggle" = false
+	#How close you have to be to see other's messages missing some words
+	"Distortion Range" = 70
+	#Word that missing words are replaced with in distortion mode
+	"Distortion Phrase" = "*inaudible*"
+	#Toggles Underscore mode, where letters of the word are replaced with underscores
+	"Underscore Mode" = false
+
