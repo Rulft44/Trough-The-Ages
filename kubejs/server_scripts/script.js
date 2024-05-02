@@ -112,7 +112,7 @@ onEvent('recipes', event => {
 	event.remove({output:'minecraft:netherite_pickaxe'})
 	event.remove({output:'minecraft:netherite_axe'})
 	event.remove({output:'minecraft:netherite_shovel'})
-	event.remove({output:'minecraft:netheite_hoe'})
+	event.remove({output:'minecraft:netherite_hoe'})
 	//add netherite alloy mixing
 	event.recipes.create.mixing('2x minecraft:netherite_ingot',[Fluid.lava(1000),'8x vintageimprovements:nethersteel_sheet','4x minecraft:netherite_scrap','2x create_dd:blaze_gold']).superheated()
 	//set new netherite stuff recipes
@@ -166,12 +166,10 @@ onEvent('recipes', event => {
   		'minecraft:grass',
   		'minecraft:grass'
 	])
-	//remove farmersdelight flint knife
-	event.remove({output:'farmersdelight:flint_knife'})
-	//remove all useless shit from notreepunching
+	//remove all useless shit from notreepunching and pizza knives
 	event.remove({output:'notreepunching:ceramic_bucket'})
 	event.remove({output:'notreepunching:clay_tool'})
-	event.remove({output:'notreepunching:macuahuitl'})
+	event.remove({output:'notreepunching:flint_knife'})
 	event.remove({output:'notreepunching:iron_knife'})
 	event.remove({output:'notreepunching:gold_knife'})
 	event.remove({output:'notreepunching:diamond_knife'})
@@ -180,6 +178,11 @@ onEvent('recipes', event => {
 	event.remove({output:'notreepunching:gold_mattock'})
 	event.remove({output:'notreepunching:diamond_mattock'})
 	event.remove({output:'notreepunching:netherite_mattock'})
+	event.remove({output:'pizzacraft:iron_knife'})
+	event.remove({output:'pizzacraft:gold_knife'})
+	event.remove({output:'pizzacraft:diamond_knife'})
+	event.remove({output:'pizzacraft:netherite_knife'})
+
 	//add normal clay back
 	event.smelting('minecraft:brick','minecraft:clay_ball')
 
