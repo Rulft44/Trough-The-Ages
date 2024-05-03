@@ -1,0 +1,10 @@
+saves/
+screenshots/
+.curseclient
+
+*logs/
+*crash-reports/
+*crash/
+
+icon.png
+usercache.json
