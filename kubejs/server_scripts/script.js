@@ -1066,4 +1066,58 @@ onEvent('recipes', event => {
 	event.remove({id:'createbigcannons:melting/melt_steel_nugget'})
 	event.recipes.create.mixing('8x alloyed:steel_ingot',['immersiveengineering:ingot_hop_graphite','8x #forge:ingots/steel']).heated()
 	event.recipes.create.mixing(Fluid.of('createbigcannons:molten_steel',90),['alloyed:steel_ingot']).superheated()
+	//make uranium arc furnace melting requirement so it can be used as a high tier material going with create_dd alloys
+	event.remove({output:'immersiveengineering:ingot_uranium'})
+	event.recipes.immersiveengineering.arc_furnace('immersiveengineering:ingot_uranium','immersiveengineering:raw_uranium',['immersiveengineering:dust_hop_graphite'],'immersiveengineering:slag',100,8000)
+	//AGE 7 ADDS------------------------------------>
+	//pneumaticcraft items get new recipees
+	//pressure tube
+	event.recipes.create.deploying('pneumaticcraft:pressure_tube',['create:fluid_pipe','pneumaticcraft:ingot_iron_compressed'])
+	//the basic automated compressor
+	event.shaped(
+		Item.of('pneumaticcraft:air_compressor'),
+		[
+			'UPU',
+			'RLR',
+			'UPU'
+		],
+		{
+			U:'#forge:plates/uranium',
+			P:'pneumaticcraft:plastic',
+			L:'create_dd:sealed_mechanism',
+			R:'immersiveengineering:graphite_electrode'
+		}
+	)
+	//do all the gravitron shit
+	event.remove({output:'vs_clockwork:gravitron'})
+	event.shaped(
+		Item.of('vs_clockwork:gravitron'),
+		[
+			'LCL',
+			'UAU',
+			'LWL'
+		],
+		{
+			L:'#forge:plates/lead',
+			C:'pneumaticcraft:ingot_iron_compressed',
+			U:'#forge:plates/uranium',
+			W:'vs_clockwork:wanderlite_matrix',
+			A:'pneumaticcraft:air_compressor'
+		}
+	)
+	//I FORGOR COMPACT MOUnT SKULLLLLLLL
+	event.shaped(
+		Item.of('cbcmodernwarfare:compact_mount'),
+		[
+			'PSP',
+			'SMS',
+			'III'
+		],
+		{
+			P:'create:precision_mechanism',
+			S:'#forge:plates/steel',
+			M:'createbigcannons:cannon_mount',
+			I:'#createbigcannons:sheet_iron'
+		}
+	)
 })
