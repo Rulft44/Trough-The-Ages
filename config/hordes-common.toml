@@ -55,7 +55,7 @@
 	#Whether later levels of infected should deplete hunger quicker? 
 	infectHunger = true
 	#Chance for a player to get infected, a value of 1 or higher makes it guaranteed
-	playerInfectChance = 0.5
+	playerInfectChance = 0.15
 	#How long do each of the 4 effect phases last for before the next phase is activated?
 	ticksForEffectStage = 6000
 	#Do players who die to infection spawn a zombie?
