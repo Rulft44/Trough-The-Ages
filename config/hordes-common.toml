@@ -75,7 +75,7 @@
 	#Whether piglins and hoglins automatically convert to zombies in the overworld
 	piglinsHoglinsConvert = false
 	#Whether zombie horses are aggressive or not.
-	aggressiveZombieHorses = true
+	aggressiveZombieHorses = false
 	#Whether zombie horses burn in sunlight.
 	zombieHorsesBurn = false
 	#Whether skeleton horses burn in sunlight.
