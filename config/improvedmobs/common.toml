@@ -112,13 +112,13 @@
 	Sound = false
 	#Chance for a mob to be able to break blocks
 	#Range: 0.0 ~ 1.0
-	"Breaker Chance" = 0.0
+	"Breaker Chance" = 0.01
 	#Initial cooldown for block breaking mobs
 	#Range: > 0
-	"Breaker Initial Cooldown" = 120
+	"Breaker Initial Cooldown" = 400
 	#Cooldown for breaking blocks
 	#Range: > 0
-	"Breaker Cooldown" = 20
+	"Breaker Cooldown" = 400
 	#Blocks will be restored after x ticks being broken. If set to 0 will never restore
 	#This will not restore block entity data!
 	#Range: > 0
@@ -132,12 +132,12 @@
 	"Steal Block Blacklist" = []
 	#Items which will be given to mobs who can break blocks. Empty list = no items. Syntax: id;weight
 	#Note: Mobs can only break blocks if the tool they are holding can break the blocks
-	"Breaking items" = ["minecraft:diamond_pickaxe;1", "minecraft:iron_axe;2"]
+	"Breaking items" = ["minecraft:wooden_pickaxe;1", "minecraft:wooden_axe;2"]
 	#Should mobs be able to break block entities? Evaluated before the break list
-	"Break BlockEntities" = true
+	"Break BlockEntities" = false
 	#Chance for neutral mobs to be aggressive
 	#Range: 0.0 ~ 1.0
-	"Neutral Aggressive Chance" = 0.1
+	"Neutral Aggressive Chance" = 0.0
 	#List for of pairs containing which mobs auto target others. Syntax is [mob id]-[mob id] where second value is the target.
 	# e.g. minecraft:zombie-minecraft:skeleton makes all zombies target skeletons
 	"Auto Target List" = []
