@@ -17,7 +17,7 @@
 
 [Infection]
 	#Tint the player's screen and display other visual effects if they are infected.
-	playerInfectionVisuals = true
+	playerInfectionVisuals = false
 	#Play a sound when the player becomes infected?
 	playerInfectSound = true
 	#Play a sound when infection gets prevented?
