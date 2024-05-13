@@ -634,7 +634,7 @@ onEvent('recipes', event => {
 		'PTP',
 		'SSS'
 	  ], {
-		I:'minecraft:iron_ingot',
+		I:'pneumaticcraft:compressed_iron_block',
 		S:'#forge:plates/steel',
 		T:'minecraft:tnt',
 		P:'pneumaticcraft:plastic'
@@ -1120,4 +1120,197 @@ onEvent('recipes', event => {
 			I:'#createbigcannons:sheet_iron'
 		}
 	)
+	//pneumaticcraft stuff
+	//fluid tank
+	event.shaped(
+		Item.of('pneumaticcraft:small_tank'),
+		[
+			'SPS',
+			'PFP',
+			'SPS'
+		],
+		{
+			S:'#forge:plates/steel',
+			P:'pneumaticcraft:plastic',
+			F:'create:fluid_tank'
+		}
+	)
+	//air canister 
+	event.shaped(
+		Item.of('pneumaticcraft:air_canister'),
+		[
+			'UPU',
+			'P P',
+			'UPU'
+		],
+		{
+			U:'#forge:plates/tin',
+			P:'pneumaticcraft:plastic'
+		}
+	)
+	//recipe sequence for reinforced air canister
+	event.recipes.create.sequenced_assembly([
+		Item.of('pneumaticcraft:reinforced_air_canister').withChance(130.0)
+	], 'pneumaticcraft:air_canister', [
+		event.recipes.createDeploying('pneumaticcraft:air_canister', ['pneumaticcraft:air_canister', 'immersiveengineering:component_electronic_adv']),
+		event.recipes.createDeploying('pneumaticcraft:air_canister', ['pneumaticcraft:air_canister', 'pneumaticcraft:compressed_iron_block']),
+		event.recipes.createPressing('pneumaticcraft:air_canister','pneumaticcraft:air_canister'),
+		event.recipes.createDeploying('pneumaticcraft:air_canister',['pneumaticcraft:air_canister','pneumaticcraft:reinforced_pressure_tube'])
+	]).transitionalItem('pneumaticcraft:air_canister').loops(1)
+	//liquid compressor and advanced liquid compressor
+	event.shaped(
+		Item.of('pneumaticcraft:liquid_compressor'),
+		[
+			'UGU',
+			'LCP',
+			'UPU'
+		],
+		{
+			U:'#forge:plates/uranium',
+			G:'pneumaticcraft:compressed_iron_gear',
+			L:'#forge:plates/lead',
+			C:'pneumaticcraft:air_compressor',
+			P:'pneumaticcraft:plastic'
+		}
+	)
+	event.shaped(
+		Item.of('pneumaticcraft:advanced_liquid_compressor'),
+		[
+			'CSC',
+			'PLP',
+			'CSC'
+		],
+		{
+			C:'create_dd:compound_base',
+			S:'vintageimprovements:copper_sulfate',
+			P:'pneumaticcraft:advanced_pressure_tube',
+			L:'pneumaticcraft:liquid_compressor'
+		}
+	)
+	//reinforced and advanced pressure tube
+	event.shaped(
+		Item.of('pneumaticcraft:reinforced_pressure_tube'),
+		[
+			' P ',
+			'PTP',
+			' P '
+		],
+		{
+			P:'immersiveengineering:plate_duroplast',
+			T:'pneumaticcraft:pressure_tube'
+		}
+	)
+	event.recipes.create.deploying('pneumaticcraft:advanced_pressure_tube',['pneumaticcraft:reinforced_pressure_tube','vintageimprovements:nethersteel_sheet'])
+	//charging station
+	event.shaped(
+		Item.of('pneumaticcraft:charging_station'),
+		[
+			' R ',
+			'UAU',
+			'USU'
+		],
+		{
+			R:'pneumaticcraft:reinforced_pressure_tube',
+			U:'#forge:plates/uranium',
+			A:'pneumaticcraft:logistics_core',
+			S:'#forge:plates/steel'
+		}
+	)
+	//compressed iron block i forgor :skul:
+	event.recipes.create.compacting('pneumaticcraft:compressed_iron_block',['9x pneumaticcraft:ingot_iron_compressed']).superheated()
+	//compressed iron armor is very special :3333
+	event.recipes.create.deploying('pneumaticcraft:compressed_iron_helmet',['immersiveengineering:armor_faraday_head','pneumaticcraft:compressed_iron_block'])
+	event.recipes.create.deploying('pneumaticcraft:compressed_iron_chestplate',['immersiveengineering:armor_faraday_chest','pneumaticcraft:compressed_iron_block'])
+	event.recipes.create.deploying('pneumaticcraft:compressed_iron_leggings',['immersiveengineering:armor_faraday_legs','pneumaticcraft:compressed_iron_block'])
+	event.recipes.create.deploying('pneumaticcraft:compressed_iron_boots',['immersiveengineering:armor_faraday_feet','pneumaticcraft:compressed_iron_block'])
+	//kerosene
+	event.recipes.create.mixing(Fluid.of('pneumaticcraft:kerosene',500),[Fluid.of('createdieselgenerators:diesel',1000)]).superheated()
+	//lubrication oil
+	event.recipes.create.mixing(Fluid.of('pneumaticcraft:lubricant',500),[Fluid.of('pneumaticcraft:kerosene',1000),'vintageimprovements:copper_sulfate']).superheated()
+	//pneumatic armor goes nutty so this will take timehhh
+	event.recipes.create.sequenced_assembly([
+		Item.of('pneumaticcraft:pneumatic_helmet').withChance(130.0)
+	], 'pneumaticcraft:compressed_iron_helmet', [
+		event.recipes.createFilling('pneumaticcraft:compressed_iron_helmet', ['pneumaticcraft:compressed_iron_helmet', Fluid.of('pneumaticcraft:lubricant',1000)]),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_helmet', ['pneumaticcraft:compressed_iron_helmet', 'pneumaticcraft:reinforced_air_canister']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_helmet',['pneumaticcraft:compressed_iron_helmet','pneumaticcraft:reinforced_air_canister']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_helmet',['pneumaticcraft:compressed_iron_helmet','immersiveengineering:plate_duroplast']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_helmet', ['pneumaticcraft:compressed_iron_helmet', 'create_dd:sealed_mechanism']),
+		event.recipes.createPressing('pneumaticcraft:compressed_iron_helmet','pneumaticcraft:compressed_iron_helmet'),
+	]).transitionalItem('pneumaticcraft:compressed_iron_helmet').loops(3)
+	event.recipes.create.sequenced_assembly([
+		Item.of('pneumaticcraft:pneumatic_chestplate').withChance(130.0)
+	], 'pneumaticcraft:compressed_iron_chestplate', [
+		event.recipes.createFilling('pneumaticcraft:compressed_iron_chestplate', ['pneumaticcraft:compressed_iron_chestplate', Fluid.of('pneumaticcraft:lubricant',1000)]),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_chestplate', ['pneumaticcraft:compressed_iron_chestplate', 'pneumaticcraft:reinforced_air_canister']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_chestplate',['pneumaticcraft:compressed_iron_chestplate','pneumaticcraft:reinforced_air_canister']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_chestplate',['pneumaticcraft:compressed_iron_chestplate','pneumaticcraft:advanced_pressure_tube']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_chestplate', ['pneumaticcraft:compressed_iron_chestplate','create_dd:sealed_mechanism']),
+		event.recipes.createPressing('pneumaticcraft:compressed_iron_chestplate','pneumaticcraft:compressed_iron_chestplate'),
+	]).transitionalItem('pneumaticcraft:compressed_iron_chestplate').loops(3)
+	//before leggings we gotta add pneumatic cylinder
+	event.shapeless('pneumaticcraft:pneumatic_cylinder',['pneumaticcraft:air_canister','createdieselgenerators:engine_piston'])
+	//
+	event.recipes.create.sequenced_assembly([
+		Item.of('pneumaticcraft:pneumatic_leggings').withChance(130.0)
+	], 'pneumaticcraft:compressed_iron_leggings', [
+		event.recipes.createFilling('pneumaticcraft:compressed_iron_leggings', ['pneumaticcraft:compressed_iron_leggings', Fluid.of('pneumaticcraft:lubricant',1000)]),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_leggings', ['pneumaticcraft:compressed_iron_leggings', 'pneumaticcraft:reinforced_air_canister']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_leggings',['pneumaticcraft:compressed_iron_leggings','pneumaticcraft:reinforced_air_canister']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_leggings',['pneumaticcraft:compressed_iron_leggings','pneumaticcraft:pneumatic_cylinder']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_leggings', ['pneumaticcraft:compressed_iron_leggings','create_dd:sealed_mechanism']),
+		event.recipes.createPressing('pneumaticcraft:compressed_iron_leggings','pneumaticcraft:compressed_iron_leggings'),
+	]).transitionalItem('pneumaticcraft:compressed_iron_leggings').loops(3)
+	event.recipes.create.sequenced_assembly([
+		Item.of('pneumaticcraft:pneumatic_boots').withChance(130.0)
+	], 'pneumaticcraft:compressed_iron_boots', [
+		event.recipes.createFilling('pneumaticcraft:compressed_iron_boots', ['pneumaticcraft:compressed_iron_boots', Fluid.of('pneumaticcraft:lubricant',1000)]),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_boots', ['pneumaticcraft:compressed_iron_boots', 'pneumaticcraft:reinforced_air_canister']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_boots',['pneumaticcraft:compressed_iron_boots','pneumaticcraft:reinforced_air_canister']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_boots',['pneumaticcraft:compressed_iron_boots','pneumaticcraft:logistics_core']),
+		event.recipes.createDeploying('pneumaticcraft:compressed_iron_boots', ['pneumaticcraft:compressed_iron_boots','create_dd:sealed_mechanism']),
+		event.recipes.createPressing('pneumaticcraft:compressed_iron_boots','pneumaticcraft:compressed_iron_boots'),
+	]).transitionalItem('pneumaticcraft:compressed_iron_boots').loops(3)
+	//upgrades
+	event.shaped(
+		Item.of('pneumaticcraft:upgrade_matrix'),
+		[
+			'LPL',
+			'PGP',
+			'LPL'
+		],
+		{
+			L:'create_dd:lapis_sheet',
+			P:'pneumaticcraft:plastic',
+			G:'pneumaticcraft:compressed_iron_gear'
+		}
+	)
+	//volume upgwade
+	event.recipes.create.deploying('pneumaticcraft:volume_upgrade',['pneumaticcraft:upgrade_matrix','immersiveengineering:toolupgrade_drill_capacity'])
+	//item life upgrade
+	event.recipes.create.deploying('pneumaticcraft:item_life_upgrade',['pneumaticcraft:upgrade_matrix','create:sturdy_sheet'])
+	//armor upgrade
+	event.recipes.create.deploying('pneumaticcraft:armor_upgrade',['pneumaticcraft:upgrade_matrix','s_a_b:hardsteelblock'])
+	//security upgrade gonna be expensive af :silly:
+	event.shaped(
+		Item.of('pneumaticcraft:security_upgrade'),
+		[
+			'PCP',
+			'CMC',
+			'PCP'
+		],
+		{
+			P:'immersiveengineering:fluid_pump',
+			C:'#forge:plates/constantan',
+			M:'pneumaticcraft:upgrade_matrix'
+		}
+	)
+	//dispenser upgrade
+	event.recipes.create.deploying('pneumaticcraft:dispenser_upgrade',['pneumaticcraft:upgrade_matrix','minecraft:dispenser'])
+	//charging upgrade
+	event.recipes.create.deploying('pneumaticcraft:charging_upgrade',['pneumaticcraft:upgrade_matrix','immersiveengineering:toolupgrade_powerpack_antenna'])
+	//scuba upgrade
+	event.recipes.create.deploying('pneumaticcraft:scuba_upgrade',['pneumaticcraft:upgrade_matrix','create:copper_backtank'])
+	//gilded upgrade
+	event.recipes.create.deploying('pneumaticcraft:gilded_upgrade',['pneumaticcraft:upgrade_matrix','vintageimprovements:electrum_spring'])
 })
