@@ -1313,4 +1313,21 @@ onEvent('recipes', event => {
 	event.recipes.create.deploying('pneumaticcraft:scuba_upgrade',['pneumaticcraft:upgrade_matrix','create:copper_backtank'])
 	//gilded upgrade
 	event.recipes.create.deploying('pneumaticcraft:gilded_upgrade',['pneumaticcraft:upgrade_matrix','vintageimprovements:electrum_spring'])
+	//inventory upgrade
+	event.recipes.create.deploying('pneumaticcraft:inventory_upgrade',['pneumaticcraft:upgrade_matrix','create:item_vault'])
+	//standby upgrade
+	event.recipes.create.deploying('pneumaticcraft:standby_upgrade',['pneumaticcraft:upgrade_matrix','minecraft:comparator'])
+	//range upgrade
+	event.recipes.create.deploying('pneumaticcraft:range_upgrade',['pneumaticcraft:upgrade_matrix','minecraft:compass'])
+	//guard drone
+	event.recipes.create.sequenced_assembly([
+		Item.of('pneumaticcraft:guard_drone').withChance(130.0)
+	], 'create_dd:industrial_fan', [
+		event.recipes.createFilling('create_dd:industrial_fan', ['create_dd:industrial_fan', Fluid.of('pneumaticcraft:lubricant',1000)]),
+		event.recipes.createDeploying('create_dd:industrial_fan', ['create_dd:industrial_fan', 'pneumaticcraft:plastic']),
+		event.recipes.createDeploying('create_dd:industrial_fan',['create_dd:industrial_fan','pneumaticcraft:turbine_rotor']),
+		event.recipes.createPressing('create_dd:industrial_fan','create_dd:industrial_fan'),
+		event.recipes.createDeploying('create_dd:industrial_fan',['create_dd:industrial_fan','immersiveengineering:component_electronic_adv']),
+	]).transitionalItem('create_dd:industrial_fan').loops(4)
+	event.remove({output:'immersiveengineering:glider'})
 })
