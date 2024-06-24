@@ -186,7 +186,7 @@ onEvent('recipes', event => {
 	//AGE 2 ADDS----------------------------------------
 	//make bandages and plasters cheaper to craft
 	event.shaped(
-		Item.of('2x firstaid:bandage'),
+		Item.of('4x firstaid:bandage'),
 		[
 			'S S',
 			'WBW',
@@ -199,7 +199,7 @@ onEvent('recipes', event => {
 		}
 	)
 	event.shaped(
-		Item.of('2x firstaid:plaster'),
+		Item.of('4x firstaid:plaster'),
 		[
 			'SS',
 			'BW'
@@ -213,8 +213,30 @@ onEvent('recipes', event => {
 	//add cinder flour recipe
 	event.shapeless('1x create:cinder_flour', [
 		'create:wheat_flour',
-		'create:scorchia'
+		'create:scorchia',
+		'minecraft:glowstone_dust'
 	])
+	//glowstone dust recipe
+	event.recipes.create.mixing('minecraft:glowstone_dust',['minecraft:glow_berries','immersiveengineering:dust_electrum',Fluid.of('minecraft:lava',25)])
+	//brown dye
+	event.recipes.create.milling('minecraft:brown_dye','farmersdelight:tree_bark')
+	//coco beans recipe
+	event.recipes.create.mixing('minecraft:cocoa_beans',['minecraft:wheat_seeds','minecraft:sugar','minecraft:brown_dye']).superheated()
+	//change gearbox recipe so constantan is useful
+	event.remove({id:'create:crafting/kinetics/gearbox'})
+	event.shaped(
+		Item.of('create:gearbox'),
+		[
+			'PC ',
+			'CAC',
+			' C '
+		],
+		{
+			P:'#forge:plates/constantan',
+			C:'create:cogwheel',
+			A:'create:andesite_casing'
+		}
+	)
 	//change empty blaze burner recipe
 	event.remove({output:'create:empty_blaze_burner'})
 	event.shaped(
@@ -235,13 +257,13 @@ onEvent('recipes', event => {
 		Item.of('create:blaze_burner'),
 		[
 			'GDG',
-			'LBL',
+			'BLB',
 			'GEG'
 		],
 		{
 			G:'createaddition:gold_rod',
 			D:'minecraft:diamond',
-			L:'minecraft:lava_bucket',
+			L:'immersiveengineering:coil_mv',
 			B:'minecraft:blast_furnace',
 			E:'create:empty_blaze_burner'
 		}
@@ -1330,4 +1352,18 @@ onEvent('recipes', event => {
 		event.recipes.createDeploying('create_dd:industrial_fan',['create_dd:industrial_fan','immersiveengineering:component_electronic_adv']),
 	]).transitionalItem('create_dd:industrial_fan').loops(4)
 	event.remove({output:'immersiveengineering:glider'})
+	//add in clay tool but diff recipe
+	event.shaped(
+		Item.of('notreepunching:clay_tool'),
+		[
+			'APA',
+			' S ',
+			' S '
+		],
+		{
+			A:'create:andesite_alloy',
+			S:'minecraft:stick',
+			P:'minecraft:string'
+		}
+	)
 })
