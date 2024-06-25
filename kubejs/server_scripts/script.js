@@ -1,4 +1,4 @@
-// priority: 0
+ // priority: 0
 
 settings.logAddedRecipes = true
 settings.logRemovedRecipes = true
@@ -1366,4 +1366,47 @@ onEvent('recipes', event => {
 			P:'minecraft:string'
 		}
 	)
+	//THE EYES... (only painful ones)
+	//witch pupil
+	event.recipes.create.sequenced_assembly([
+		Item.of('endrem:witch_pupil').withChance(130.0)
+	], 'minecraft:spider_eye', [
+		event.recipes.createFilling('minecraft:spider_eye', ['minecraft:spider_eye', Fluid.of('create:potion',1000,{Potion: 'minecraft:swiftness'})]),
+		event.recipes.createFilling('minecraft:spider_eye', ['minecraft:spider_eye', Fluid.of('create:potion',1000,{Potion: 'minecraft:slowness'})]),
+		event.recipes.createFilling('minecraft:spider_eye', ['minecraft:spider_eye', Fluid.of('create:potion',1000,{Potion: 'minecraft:poison'})]),
+		event.recipes.createFilling('minecraft:spider_eye', ['minecraft:spider_eye', Fluid.of('create:potion',1000,{Potion: 'minecraft:leaping'})]),
+		event.recipes.createFilling('minecraft:spider_eye', ['minecraft:spider_eye', Fluid.of('create:potion',1000,{Potion: 'minecraft:weakness'})]),
+		event.recipes.createPressing('minecraft:spider_eye','minecraft:spider_eye'),
+	]).transitionalItem('minecraft:spider_eye').loops(1)
+
+	//old eye
+	event.recipes.create.sequenced_assembly([
+		Item.of('endrem:old_eye').withChance(130.0)
+	], 'minecraft:ender_eye', [
+		event.recipes.createDeploying('minecraft:ender_eye', ['minecraft:ender_eye', 'minecraft:ancient_debris']),
+		event.recipes.createFilling('minecraft:ender_eye', ['minecraft:ender_eye', Fluid.of('create_dd:shimmer',125)]),
+		event.recipes.createPressing('minecraft:ender_eye','minecraft:ender_eye'),
+	]).transitionalItem('minecraft:ender_eye').loops(2)
+
+	//nether eye
+	event.recipes.immersiveengineering.arc_furnace('endrem:nether_eye','minecraft:ender_eye',['4x createdeco:netherite_sheet'],'immersive_weathering:ash_layer_block',10,10)
+
+	//wither potion+""rose + corrupted eye
+	event.recipes.create.sequenced_assembly([
+		Item.of('minecraft:wither_rose').withChance(130.0)
+	], 'minecraft:poppy', [
+		event.recipes.createFilling('minecraft:poppy', ['minecraft:poppy', Fluid.of('create:potion',1000,{Potion:'minecraft:harming'})]),
+		event.recipes.createFilling('minecraft:poppy', ['minecraft:poppy', Fluid.of('create:potion',1000,{Potion:'minecraft:poison'})]),
+		event.recipes.createPressing('minecraft:poppy','minecraft:poppy'),
+	]).transitionalItem('minecraft:poppy').loops(1)
+
+	event.recipes.create.mixing([Item.of("minecraft:potion",{CustomPotionColor:0,CustomPotionEffects:[{Id:20,Duration:200,Amplifier:0}]})],['minecraft:wither_rose',Fluid.of("minecraft:water",1000)]).superheated()
+
+	event.recipes.create.sequenced_assembly([
+		Item.of('endrem:corrupted_eye').withChance(130.0)
+	], 'minecraft:ender_eye', [
+		event.recipes.createDeploying('minecraft:ender_eye', ['minecraft:ender_eye', Item.of("minecraft:potion",{CustomPotionColor:0,CustomPotionEffects:[{Id:20,Duration:200,Amplifier:0}]})]),
+		event.recipes.createFilling('minecraft:ender_eye', ['minecraft:ender_eye', Fluid.of('createbigcannons:molten_steel',1000)]),
+		event.recipes.createPressing('minecraft:ender_eye','minecraft:ender_eye'),
+	]).transitionalItem('minecraft:ender_eye').loops(2)
 })
